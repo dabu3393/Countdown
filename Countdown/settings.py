@@ -20,11 +20,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = 'django-insecure-2%_(u!%&@axu_c$pxo1jkalu547fv%)^rf7&um1_ol(c)r+=)8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+STATICFILES_DIRS = [
+    "/Users/davisburrill/Documents/GitHub_Repos/Countdown/static"
+]
 
 
 # Application definition
@@ -53,7 +58,7 @@ ROOT_URLCONF = 'Countdown.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

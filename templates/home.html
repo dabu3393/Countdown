@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Welcome to your Countdown Timer</h1>
+    <h3>Select an event to view its countdown</h3>
+    <button>Example Button of event</button>
+    <h3>Need to add an event? Input here</h3>
+    <form>
+        <label for="input-box">Event:</label>
+        <input type="text" id="input-box">
+        <label for="input-box">Date:</label>
+        <input type="date" id="input-box">
+        <label for="input-box">Time:</label>
+        <input type="time" id="input-box">
+      </form>      
+    <button>Submit for Countdown</button>
+
+</body>
+</html>
+
+
+
+
+<!-- 
+Open up with "Welcome to your Countdown Timer"
+
+Have it create a section that let's them pick a certain event
+    . When an event is chosen, have it fade the home page and display the countdown timer
+
+Under that, do "Need to add an event? Input here"
+    . Submit button under that
+    . Once submit button is pressed, fade home page and display new timer.
+
+
+
+-->

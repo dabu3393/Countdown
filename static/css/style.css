@@ -1,0 +1,123 @@
+body {
+    background-color: #2B3A67; /* Light blue */
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    margin-bottom: 0; /* remove the default margin */
+    margin-top: -10px; /* move h1 up by 10px */
+}
+
+h3 {
+    padding: 20px 0 20px 0;
+}
+
+button{
+    display: inline-block;
+    text-decoration: none;
+    color: #f7f0f0;
+    border: 1px solid #B288C0;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 20px;
+    background: #B288C0;
+    position: relative;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 1px solid #FE6D73;
+    background: #FE6D73;
+    transition: 1s;
+}
+
+.container {
+    display: inline-block; /* display the label and input variable as a flex container */
+    align-items: center; /* align the label and input variable vertically */
+    border-radius: 5px; /* add 10px of rounded edges to the border of the container */
+    overflow: hidden; /* hide the overflow of the container */
+    font-size: 0;
+    margin: 0 15px 15px 15px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+label {
+    background-color: #377d6a; /* set the background color of the label to green */
+    padding: 10px; /* add 10px of padding to the label */
+    color: #f7f0f0; /* change text color to white*/
+    font-size: 16px;
+}
+
+input {
+    width: 500px;
+    background-color: #f7f0f0; /* set the background color of the input to white */
+    padding: 10px; /* add 10px of padding to the input */
+    border: none; /* remove border from input*/
+    font-size: 16px;
+}
+
+
+.home {
+    color: #f7f0f0;
+    font-family: 'Avenir';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    animation: move-up-and-fade-in 6s forwards;
+    animation-delay: 1s;
+}
+
+.bottom-line {
+    font-size: 100px;
+}
+
+.body-fade {
+    opacity: 0; /* set the initial opacity to 0 */
+    animation: fadein 2s 7s;
+    animation-fill-mode: forwards;
+    -webkit-animation: fadein 2s 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards; /* Safari and Chrome */
+}
+
+#countdown {
+    font-size: 50px;
+    font-family: 'Avenir';
+    color: #f7f0f0;
+}
+
+@keyframes move-up-and-fade-in {
+    0% { /* initial state */
+      top: 50%; /* center the h1 tag vertically */
+      opacity: 0; /* set the initial opacity to 0 */
+    }
+    25% { /* after 2 seconds */
+      opacity: 1; /* set the opacity to 1 */
+    }
+    40% {
+      top: 50%;
+    }
+    100% { /* final state */
+      top: 40%; /* move the h1 tag to the top of the page */
+      opacity: 1; /* set the final opacity to 1 */
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+

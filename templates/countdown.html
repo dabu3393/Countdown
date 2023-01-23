@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script type="text/javascript">
+        function updateCountdown(time_remaining) {
+            // get the countdown element
+            var countdown = document.getElementById("countdown");
+    
+            // calculate the days, hours, minutes, and seconds remaining
+            var days = Math.floor(time_remaining / (24 * 60 * 60));
+            var hours = Math.floor((time_remaining % (24 * 60 * 60)) / (60 * 60));
+            var minutes = Math.floor((time_remaining % (60 * 60)) / 60);
+            var seconds = Math.floor(time_remaining % 60);
+    
+            // update the countdown text
+            countdown.innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
+        }
+    
+        // call the updateCountdown function every second
+        var timeRemaining = {{ time_remaining }};
+
+        setInterval(function(){
+            updateCountdown(timeRemaining);
+            timeRemaining -= 1;
+        }, 1000);
+    </script>
+    </head>
+<body>
+    <div class="countdown-container">
+        <h1>Time until {{ event }}</h1>
+        <div id="countdown">{{ time_remaining }}</div>
+        <h3>{{ formatted_date }}</h3>
+    </div>
+</body>
+</html>
